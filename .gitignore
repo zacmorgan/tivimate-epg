@@ -1,0 +1,13 @@
+# Guides are published as release assets, never committed to Git.
+/dist/
+/work/
+/epg-cache/
+*.xml
+*.xml.gz
+*-report.json
+*.sqlite3
+*.part
+*.tmp
+__pycache__/
+*.py[cod]
+.DS_Store
