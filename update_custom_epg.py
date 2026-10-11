@@ -28,7 +28,8 @@ def download(url: str, target: Path) -> None:
                 with partial.open("wb") as output:
                     shutil.copyfileobj(response, output, CHUNK)
             with gzip.open(partial, "rb") as source:
-                if source.read(5) != b"<?xml":
+                _, root = next(ET.iterparse(source, events=("start",)))
+                if root.tag != "tv":
                     raise ValueError("download is not a gzipped XMLTV file")
             partial.replace(target)
             return
