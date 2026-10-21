@@ -827,6 +827,36 @@
       "id": "ESPN2.us",
       "name": "[US] ESPN2",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn2.png"
+    },
+    {
+      "id": "SonyMovieChannel.us",
+      "name": "[US] Sony Movie Channel",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/sony-movies.webp"
+    },
+    {
+      "id": "TCM.us",
+      "name": "[US] TCM",
+      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] ENTERTAINMENT/TCM.png"
+    },
+    {
+      "id": "SundanceTV.us",
+      "name": "[US] Sundance",
+      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] MOVIES & SERIES/SUNDANCE.png"
+    },
+    {
+      "id": "IFC.us",
+      "name": "[US] IFC",
+      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/IFC.png"
+    },
+    {
+      "id": "HallmarkFamily.us",
+      "name": "[US] Hallmark Family",
+      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/HALLMARK FAMILY.png"
+    },
+    {
+      "id": "HallmarkMystery.us",
+      "name": "[US] Hallmark Mystery",
+      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/HALLMARK MYSTERY.png"
     }
   ]
 }
