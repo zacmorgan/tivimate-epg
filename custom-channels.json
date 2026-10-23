@@ -836,27 +836,27 @@
     {
       "id": "TCM.us",
       "name": "[US] TCM",
-      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] ENTERTAINMENT/TCM.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tcm.png"
     },
     {
       "id": "SundanceTV.us",
       "name": "[US] Sundance",
-      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] MOVIES & SERIES/SUNDANCE.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/sundance.png"
     },
     {
       "id": "IFC.us",
       "name": "[US] IFC",
-      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/IFC.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ifc.png"
     },
     {
       "id": "HallmarkFamily.us",
       "name": "[US] Hallmark Family",
-      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/HALLMARK FAMILY.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hallmark-family.png"
     },
     {
       "id": "HallmarkMystery.us",
       "name": "[US] Hallmark Mystery",
-      "logo": "http://picon.tele-go.net:25461/picon/1TELEMAX/[U.S.A.] SLING/HALLMARK MYSTERY.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hallmark-mystery.png"
     }
   ]
 }
