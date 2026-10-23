@@ -5,7 +5,8 @@
     "gb",
     "mx",
     "ar",
-    "uy"
+    "uy",
+    "bs"
   ],
   "channels": [
     {
@@ -129,7 +130,7 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "HBOHits.us",
+      "id": "HBOHits.bs",
       "name": "[US] HBO 2 East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
     },
