@@ -66,6 +66,7 @@ def main() -> None:
 
     programmes = {channel_id: [] for channel_id in ids}
     seen_programmes = set()
+    klcs_candidates = []
     for source in sources:
         with gzip.open(source, "rb") as stream:
             for _, element in ET.iterparse(stream, events=("end",)):
@@ -75,12 +76,17 @@ def main() -> None:
                     if digest not in seen_programmes:
                         seen_programmes.add(digest)
                         programmes[element.get("channel")].append(copy.deepcopy(element))
+                if element.tag == "channel":
+                    label = " ".join((node.text or "") for node in element.findall("display-name"))
+                    if "KLCS" in (element.get("id", "") + " " + label).upper():
+                        klcs_candidates.append((element.get("id"), label))
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
 
     missing = [channel_id for channel_id, listings in programmes.items() if not listings]
     if missing:
+        print(f"Matching KLCS guide candidates: {klcs_candidates}", flush=True)
         raise ValueError(f"No programmes found for {len(missing)} guide IDs: {missing}")
 
     root = ET.Element("tv", {
