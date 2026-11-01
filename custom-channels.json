@@ -828,6 +828,16 @@
       "id": "HallmarkMystery.us",
       "name": "Hallmark Mystery",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hallmark-mystery.png"
+    },
+    {
+      "id": "CMT.ca",
+      "name": "CMT Canada",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
+    },
+    {
+      "id": "CartoonNetwork.ca",
+      "name": "Cartoon Network",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cartoon-network.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
