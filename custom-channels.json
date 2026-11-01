@@ -117,7 +117,7 @@
     {
       "id": "CMT.ca",
       "name": "CMT Canada",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176872.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
     },
     {
       "id": "EEntertainmentTelevision.us",
@@ -367,7 +367,7 @@
     {
       "id": "HomeNetwork.ca",
       "name": "Home Network",
-      "logo": "https://www.globaltv.com/wp-content/themes/corus-wpt-video-first/assets/icons/home-network.svg"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/home-network.png"
     },
     {
       "id": "FoodNetwork.us",
@@ -441,12 +441,7 @@
     },
     {
       "id": "InvestigationDiscovery.us",
-      "name": "Investigation Discovery East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/id.png"
-    },
-    {
-      "id": "InvestigationDiscoveryPacific.us",
-      "name": "Investigation Discovery West",
+      "name": "Investigation Discovery",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/id.png"
     },
     {
@@ -793,29 +788,7 @@
       "id": "NFLNetwork.us",
       "name": "NFL Network",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
-    },
-    {
-      "id": "Starz.us@West",
-      "name": "Starz West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
-    },
-    {
-      "id": "StarzEncore.us@West",
-      "name": "Starz Encore West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     }
   ],
-  "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z",
-  "streamingtvguides": [
-    {
-      "id": "Starz.us@West",
-      "url": "https://streamingtvguides.com/Channel/DTV%3ASTZw%3A526",
-      "timezone": "America/Regina"
-    },
-    {
-      "id": "StarzEncore.us@West",
-      "url": "https://streamingtvguides.com/Channel/DTV%3ASENw%3A536",
-      "timezone": "America/Regina"
-    }
-  ]
+  "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
 }
