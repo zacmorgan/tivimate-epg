@@ -580,11 +580,6 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "Starz.us",
-      "name": "Starz West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
-    },
-    {
       "id": "StarzCinema.us",
       "name": "Starz Cinema",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
@@ -612,11 +607,6 @@
     {
       "id": "StarzEncore.us",
       "name": "Starz Encore East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
-    },
-    {
-      "id": "StarzEncore.us",
-      "name": "Starz Encore West",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
