@@ -4,12 +4,10 @@ from __future__ import annotations
 
 import argparse
 import copy
-from datetime import datetime, timedelta
 import gzip
 import hashlib
 import html
 import json
-import re
 from pathlib import Path
 import shutil
 import ssl
@@ -17,7 +15,6 @@ import tempfile
 import time
 import urllib.parse
 import urllib.request
-from zoneinfo import ZoneInfo
 import xml.etree.ElementTree as ET
 
 BASE_URL = "https://iptv-epg.org/files/epg-{country}.xml.gz"
@@ -128,50 +125,6 @@ def download(url: str, target: Path) -> None:
             time.sleep(2 ** (attempt + 1))
 
 
-def download_xmltv(url: str) -> ET.Element:
-    request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
-    with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
-        root = ET.fromstring(response.read())
-    if root.tag != "tv":
-        raise ValueError(f"external source is not XMLTV: {url}")
-    return root
-
-
-def streamingtvguide_programmes(url: str, channel_id: str, timezone_name: str) -> list[ET.Element]:
-    request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
-    with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
-        page = response.read().decode("utf-8")
-    pattern = re.compile(
-        r'data-program-title="([^"]*)"[^>]*?data-program-time="([^"]*)"[^>]*?'
-        r'data-program-subtitle="([^"]*)"[^>]*?data-program-description="([^"]*)"'
-    )
-    timezone = ZoneInfo(timezone_name)
-    year = datetime.now(timezone).year
-    listings = []
-    for title, span, subtitle, description in pattern.findall(page):
-        start_text, end_text = (part.strip() for part in span.split(" - ", 1))
-        start = datetime.strptime(start_text, "%a, %b %d %I:%M %p").replace(year=year, tzinfo=timezone)
-        end = datetime.strptime(end_text, "%I:%M %p").replace(
-            year=start.year, month=start.month, day=start.day, tzinfo=timezone
-        )
-        if end <= start:
-            end += timedelta(days=1)
-        programme = ET.Element("programme", {
-            "start": start.strftime("%Y%m%d%H%M%S %z"),
-            "stop": end.strftime("%Y%m%d%H%M%S %z"),
-            "channel": channel_id,
-        })
-        ET.SubElement(programme, "title", {"lang": "en"}).text = html.unescape(title)
-        if subtitle:
-            ET.SubElement(programme, "sub-title", {"lang": "en"}).text = html.unescape(subtitle)
-        if description:
-            ET.SubElement(programme, "desc", {"lang": "en"}).text = html.unescape(description)
-        listings.append(programme)
-    if not listings:
-        raise ValueError(f"no listings found in streaming schedule: {url}")
-    return listings
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("custom-channels.json"))
@@ -211,42 +164,6 @@ def main() -> None:
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
-
-    for source_config in config.get("external_xmltv", []):
-        target_id = source_config["id"]
-        if target_id not in programmes:
-            raise ValueError(f"external source targets unknown guide ID: {target_id}")
-        root = download_xmltv(source_config["url"])
-        found = 0
-        for element in root.findall("programme"):
-            element.set("channel", target_id)
-            encoded = ET.tostring(element, encoding="utf-8")
-            digest = hashlib.sha256(encoded).digest()
-            if digest not in seen_programmes:
-                seen_programmes.add(digest)
-                programmes[target_id].append(copy.deepcopy(element))
-                found += 1
-        if not found:
-            raise ValueError(f"no programmes found in external source for {target_id}")
-        print(f"Read external guide for {target_id}", flush=True)
-
-    for source_config in config.get("streamingtvguides", []):
-        target_id = source_config["id"]
-        if target_id not in programmes:
-            raise ValueError(f"streaming schedule targets unknown guide ID: {target_id}")
-        found = 0
-        for element in streamingtvguide_programmes(
-            source_config["url"], target_id, source_config.get("timezone", "America/Regina")
-        ):
-            encoded = ET.tostring(element, encoding="utf-8")
-            digest = hashlib.sha256(encoded).digest()
-            if digest not in seen_programmes:
-                seen_programmes.add(digest)
-                programmes[target_id].append(element)
-                found += 1
-        if not found:
-            raise ValueError(f"no programmes found in streaming schedule for {target_id}")
-        print(f"Read streaming schedule for {target_id}", flush=True)
 
     translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
     if translated_count:
