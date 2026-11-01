@@ -6,17 +6,98 @@ import argparse
 import copy
 import gzip
 import hashlib
+import html
 import json
 from pathlib import Path
 import shutil
 import ssl
 import tempfile
 import time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
 BASE_URL = "https://iptv-epg.org/files/epg-{country}.xml.gz"
 CHUNK = 1024 * 1024
+TRANSLATION_URL = "https://api.mymemory.translated.net/get"
+MAX_TRANSLATION_CHARS = 4_500
+
+
+def xml_language(element: ET.Element) -> str:
+    return (element.get("lang") or element.get("{http://www.w3.org/XML/1998/namespace}lang") or "").split("-", 1)[0].lower()
+
+
+def translate_text(text: str, source_language: str) -> str | None:
+    query = urllib.parse.urlencode({
+        "q": text,
+        "langpair": f"{source_language}|en",
+        "mt": "1",
+    })
+    request = urllib.request.Request(
+        f"{TRANSLATION_URL}?{query}",
+        headers={"User-Agent": "TiviMate-Custom-EPG/1.0"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30, context=ssl.create_default_context()) as response:
+            payload = json.load(response)
+        if payload.get("responseStatus") != 200:
+            return None
+        translation = html.unescape((payload.get("responseData") or {}).get("translatedText") or "").strip()
+        return translation or None
+    except Exception:
+        return None
+
+
+def translate_programme_titles(
+    programmes: dict[str, list[ET.Element]],
+    cache_path: Path,
+) -> tuple[int, int]:
+    try:
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        cache = {}
+    if not isinstance(cache, dict):
+        raise ValueError("translation cache must be a JSON object")
+
+    translated_count = 0
+    request_chars = 0
+    dirty = False
+    for listings in programmes.values():
+        for programme in listings:
+            for field in programme.findall("title") + programme.findall("sub-title"):
+                source_language = xml_language(field)
+                original = (field.text or "").strip()
+                if not original or source_language in ("", "en"):
+                    continue
+                key = f"{source_language}|{original}"
+                translation = cache.get(key)
+                if not isinstance(translation, str):
+                    # MyMemory accepts a maximum of 500 bytes per request; the
+                    # anonymous tier is capped at 5,000 characters each day.
+                    if (
+                        len(original.encode("utf-8")) > 500
+                        or request_chars + len(original) > MAX_TRANSLATION_CHARS
+                    ):
+                        continue
+                    translation = translate_text(original, source_language)
+                    request_chars += len(original)
+                    if translation is None:
+                        continue
+                    cache[key] = translation
+                    dirty = True
+                field.text = translation
+                field.set("lang", "en")
+                field.attrib.pop("{http://www.w3.org/XML/1998/namespace}lang", None)
+                translated_count += 1
+
+    if dirty:
+        cache_path.write_text(
+            json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+    return translated_count, request_chars
+
+
 
 
 def download(url: str, target: Path) -> None:
@@ -46,6 +127,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("all-channels-epg.xml.gz"))
     parser.add_argument("--work-dir", type=Path, required=True)
     parser.add_argument("--source-dir", type=Path, help="Use existing epg-XX.xml.gz files for local testing")
+    parser.add_argument("--translation-cache", type=Path, default=Path("translation-cache.json"))
     args = parser.parse_args()
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
@@ -78,6 +160,10 @@ def main() -> None:
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
+
+    translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
+    if translated_count:
+        print(f"Translated {translated_count} title fields ({translation_chars} new request characters)", flush=True)
 
     missing = [channel_id for channel_id, listings in programmes.items() if not listings]
     if missing:
