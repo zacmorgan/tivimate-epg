@@ -793,7 +793,27 @@
       "id": "NFLNetwork.us",
       "name": "NFL Network",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
+    },
+    {
+      "id": "Starz.us@West",
+      "name": "Starz West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
+    },
+    {
+      "id": "StarzEncore.us@West",
+      "name": "Starz Encore West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     }
   ],
-  "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
+  "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z",
+  "external_xmltv": [
+    {
+      "id": "Starz.us@West",
+      "url": "https://epg.pw/api/epg.xml?channel_id=2046"
+    },
+    {
+      "id": "StarzEncore.us@West",
+      "url": "https://epg.pw/api/epg.xml?channel_id=1407"
+    }
+  ]
 }
