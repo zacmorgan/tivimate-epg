@@ -806,14 +806,16 @@
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z",
-  "external_xmltv": [
+  "streamingtvguides": [
     {
       "id": "Starz.us@West",
-      "url": "https://epg.pw/api/epg.xml?channel_id=2046"
+      "url": "https://streamingtvguides.com/Channel/DTV%3ASTZw%3A526",
+      "timezone": "America/Regina"
     },
     {
       "id": "StarzEncore.us@West",
-      "url": "https://epg.pw/api/epg.xml?channel_id=1407"
+      "url": "https://streamingtvguides.com/Channel/DTV%3ASENw%3A536",
+      "timezone": "America/Regina"
     }
   ]
 }
