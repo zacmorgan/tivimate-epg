@@ -1,3 +1,4 @@
+/opt/homebrew/Library/Homebrew/cmd/shellenv.sh: line 18: /bin/ps: Operation not permitted
 {
   "countries": [
     "us",
@@ -60,7 +61,7 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nbc.png"
     },
     {
-      "id": "NBCKNBC.us",
+      "id": "NBCKCRA.us",
       "name": "NBC West",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nbc.png"
     },
@@ -106,83 +107,18 @@
     },
     {
       "id": "CWWPIX.us",
-      "name": "The CW East",
+      "name": "The CW",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/the-cw.png"
     },
     {
-      "id": "PBSKLCS.us",
-      "name": "PBS West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pbs.png"
+      "id": "CMT.us",
+      "name": "CMT",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
     },
     {
-      "id": "HBO.us",
-      "name": "HBO East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
-    },
-    {
-      "id": "HBOPacific.us",
-      "name": "HBO West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
-    },
-    {
-      "id": "HBOHits.us",
-      "name": "HBO 2 East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
-    },
-    {
-      "id": "HBOHitsPacific.us",
-      "name": "HBO 2 West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
-    },
-    {
-      "id": "HBOComedy.us",
-      "name": "HBO Comedy East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-comedy.png"
-    },
-    {
-      "id": "HBOComedyPacific.us",
-      "name": "HBO Comedy West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-comedy.png"
-    },
-    {
-      "id": "HBOFamily.mx",
-      "name": "HBO Family East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-family.png"
-    },
-    {
-      "id": "HBOLatino.us",
-      "name": "HBO Latino East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-latino.png"
-    },
-    {
-      "id": "HBOLatinoPacific.us",
-      "name": "HBO Latino West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-latino.png"
-    },
-    {
-      "id": "HBODramaPacific.us",
-      "name": "HBO Signature West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-drama.png"
-    },
-    {
-      "id": "HBOMovies.us",
-      "name": "HBO Movies East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-movies.png"
-    },
-    {
-      "id": "HBOMoviesPacific.us",
-      "name": "HBO Movies West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-movies.png"
-    },
-    {
-      "id": "HBO1.ca",
-      "name": "HBO 1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
-    },
-    {
-      "id": "HBO2.ca",
-      "name": "HBO 2",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
+      "id": "CMT.ca",
+      "name": "CMT Canada",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176872.png"
     },
     {
       "id": "EEntertainmentTelevision.us",
@@ -200,6 +136,101 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/e.png"
     },
     {
+      "id": "TBS.us",
+      "name": "TBS East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tbs.png"
+    },
+    {
+      "id": "TBSPacific.us",
+      "name": "TBS West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tbs.png"
+    },
+    {
+      "id": "PBSKLCS.us",
+      "name": "PBS",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pbs.png"
+    },
+    {
+      "id": "Freeform.us",
+      "name": "Freeform East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/freeform.png"
+    },
+    {
+      "id": "FreeformPacific.us",
+      "name": "Freeform West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/freeform.png"
+    },
+    {
+      "id": "CartoonNetwork.ca",
+      "name": "Cartoon Network",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cartoon-network.png"
+    },
+    {
+      "id": "CartoonNetwork.us",
+      "name": "Adult Swim East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/adult-swim.png"
+    },
+    {
+      "id": "CartoonNetworkPacific.us",
+      "name": "Adult Swim West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/adult-swim.png"
+    },
+    {
+      "id": "DisneyChannel.us",
+      "name": "Disney Channel East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disney-channel.png"
+    },
+    {
+      "id": "DisneyChannelPacific.us",
+      "name": "Disney Channel West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disney-channel.png"
+    },
+    {
+      "id": "DisneyXD.us",
+      "name": "Disney XD East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disneyxd.png"
+    },
+    {
+      "id": "DisneyXDPacific.us",
+      "name": "Disney XD West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disneyxd.png"
+    },
+    {
+      "id": "YTV.ca",
+      "name": "YTV",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ytv.png"
+    },
+    {
+      "id": "PBSKidsNYC.us",
+      "name": "PBS Kids",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pbs-kids.png"
+    },
+    {
+      "id": "NickJr.us",
+      "name": "Nick Jr.",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nick-jr.png"
+    },
+    {
+      "id": "Nickelodeon.us",
+      "name": "Nickelodeon East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
+    },
+    {
+      "id": "NickelodeonPacific.us",
+      "name": "Nickelodeon West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
+    },
+    {
+      "id": "Nicktoons.us",
+      "name": "Nicktoons",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nicktoons.png"
+    },
+    {
+      "id": "TeenNick.us",
+      "name": "TeenNick",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/teennick.png"
+    },
+    {
       "id": "ComedyCentral.us",
       "name": "Comedy Central East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/comedy-central.png"
@@ -208,21 +239,6 @@
       "id": "ComedyCentralPacific.us",
       "name": "Comedy Central West",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/comedy-central.png"
-    },
-    {
-      "id": "ParamountNetwork.us",
-      "name": "Paramount Network East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/paramount-network.png"
-    },
-    {
-      "id": "ParamountNetworkPacific.us",
-      "name": "Paramount Network West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/paramount-network.png"
-    },
-    {
-      "id": "ParamountNetwork.mx",
-      "name": "Paramount Network",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/paramount-channel.png"
     },
     {
       "id": "MTV.us",
@@ -236,21 +252,11 @@
     },
     {
       "id": "MTV2.us",
-      "name": "MTV2 East",
+      "name": "MTV2",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/mtv2.png"
     },
     {
       "id": "AandENetwork.us",
-      "name": "A&E East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/a-and-e.png"
-    },
-    {
-      "id": "AandENetworkPacific.us",
-      "name": "A&E West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/a-and-e.png"
-    },
-    {
-      "id": "AandE.ca",
       "name": "A&E",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/a-and-e.png"
     },
@@ -266,12 +272,12 @@
     },
     {
       "id": "AMC.us",
-      "name": "AMC East",
+      "name": "AMC",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/amc.png"
     },
     {
-      "id": "AMCPacific.us",
-      "name": "AMC West",
+      "id": "AMCPlus.us",
+      "name": "AMC+",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/amc.png"
     },
     {
@@ -285,13 +291,8 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fx.png"
     },
     {
-      "id": "FXX.us",
-      "name": "FXX East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fxx.png"
-    },
-    {
       "id": "FXXPacific.us",
-      "name": "FXX West",
+      "name": "FXX",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fxx.png"
     },
     {
@@ -305,28 +306,13 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/syfy.png"
     },
     {
-      "id": "FYIPacific.us",
-      "name": "FYI West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fyi.png"
-    },
-    {
       "id": "TMZ.us",
       "name": "TMZ",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tmz.png"
     },
     {
-      "id": "TBS.us",
-      "name": "TBS East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tbs.png"
-    },
-    {
-      "id": "TBSPacific.us",
-      "name": "TBS West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tbs.png"
-    },
-    {
       "id": "TNT.us",
-      "name": "TNT East",
+      "name": "TNT",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tnt.png"
     },
     {
@@ -335,22 +321,7 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tv-land.png"
     },
     {
-      "id": "CMT.us",
-      "name": "CMT East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
-    },
-    {
-      "id": "CMTPacific.us",
-      "name": "CMT West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
-    },
-    {
       "id": "GameShowNetwork.us",
-      "name": "GSN",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/gsn.png"
-    },
-    {
-      "id": "GameShowNetwork.ca",
       "name": "GSN",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/gsn.png"
     },
@@ -385,51 +356,6 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/dejaview.png"
     },
     {
-      "id": "SuperChannelFuse.ca",
-      "name": "Super Channel Fuse",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-fuse.png"
-    },
-    {
-      "id": "SuperChannelHeartandHome.ca",
-      "name": "Super Channel Heart & Home",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-heart-and-home.png"
-    },
-    {
-      "id": "SuperChannelVault.ca",
-      "name": "Super Channel Vault",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-vault.png"
-    },
-    {
-      "id": "MGM+.us",
-      "name": "MGM",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/mgm.png"
-    },
-    {
-      "id": "Film4.uk",
-      "name": "Film4",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/film4.png"
-    },
-    {
-      "id": "Film4+1.uk",
-      "name": "Film4 +1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/film4.png"
-    },
-    {
-      "id": "SkyCinemaPremiere.uk",
-      "name": "Sky Cinema Premiere",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/sky-cinema-premiere.png"
-    },
-    {
-      "id": "WarnerChannel.mx",
-      "name": "Warner Channel",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/warner-channel.png"
-    },
-    {
-      "id": "UniversalTV.mx",
-      "name": "Universal Channel",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/universal-tv.png"
-    },
-    {
       "id": "HGTV.us",
       "name": "HGTV East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hgtv.png"
@@ -442,7 +368,7 @@
     {
       "id": "HomeNetwork.ca",
       "name": "Home Network",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/home-network.png"
+      "logo": "https://www.globaltv.com/wp-content/themes/corus-wpt-video-first/assets/icons/home-network.svg"
     },
     {
       "id": "FoodNetwork.us",
@@ -510,11 +436,6 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/discovery-channel.png"
     },
     {
-      "id": "CTVNature.ca",
-      "name": "Discovery Science",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/discovery-science.png"
-    },
-    {
       "id": "ScienceChannel.us",
       "name": "Discovery Science",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/discovery-science.png"
@@ -541,18 +462,13 @@
     },
     {
       "id": "NationalGeographic.us",
-      "name": "Nat Geo East",
+      "name": "Nat Geo",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nat-geo.png"
     },
     {
       "id": "NationalGeographicWild.us",
-      "name": "Nat Geo Wild East",
+      "name": "Nat Geo Wild",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nat-geo-wild.png"
-    },
-    {
-      "id": "NationalGeographicPacific.us",
-      "name": "Nat Geo West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nat-geo.png"
     },
     {
       "id": "NationalGeographic.ca",
@@ -561,12 +477,7 @@
     },
     {
       "id": "History.us",
-      "name": "History East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/history.png"
-    },
-    {
-      "id": "HistoryChannelPacific.us",
-      "name": "History West",
+      "name": "History",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/history.png"
     },
     {
@@ -605,199 +516,179 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/dogtv.png"
     },
     {
-      "id": "Freeform.us",
-      "name": "Freeform East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/freeform.png"
+      "id": "HBO.us",
+      "name": "HBO East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "FreeformPacific.us",
-      "name": "Freeform West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/freeform.png"
+      "id": "HBOPacific.us",
+      "name": "HBO West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "BBCOne.uk",
-      "name": "BBC One",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc-one.png"
+      "id": "HBOHits.bs",
+      "name": "HBO 2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
     },
     {
-      "id": "BBCTwo.uk",
-      "name": "BBC Two",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc-two.png"
+      "id": "HBOComedy.us",
+      "name": "HBO Comedy",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-comedy.png"
     },
     {
-      "id": "Channel4.uk",
-      "name": "Channel 4",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-4.png"
+      "id": "HBODramaPacific.us",
+      "name": "HBO Signature",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-drama.png"
     },
     {
-      "id": "Channel4+1.uk",
-      "name": "Channel 4 +1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-4.png"
+      "id": "HBOMovies.us",
+      "name": "HBO Movies",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-movies.png"
     },
     {
-      "id": "Channel5.uk",
-      "name": "Channel 5",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-5.png"
+      "id": "HBO1.ca",
+      "name": "HBO 1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "Channel5+1.uk",
-      "name": "Channel 5 +1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-5.png"
+      "id": "HBO2.ca",
+      "name": "HBO 2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "AMCPlus.us",
-      "name": "AMC+",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/amc.png"
+      "id": "SuperChannelFuse.ca",
+      "name": "Super Channel Fuse",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-fuse.png"
     },
     {
-      "id": "ITV1London.uk",
-      "name": "ITV1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv1.png"
+      "id": "SuperChannelHeartandHome.ca",
+      "name": "Super Channel Heart & Home",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-heart-and-home.png"
     },
     {
-      "id": "ITV1London+1.uk",
-      "name": "ITV1 +1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv1.png"
+      "id": "SuperChannelVault.ca",
+      "name": "Super Channel Vault",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/super-channel-vault.png"
     },
     {
-      "id": "ITV2.uk",
-      "name": "ITV2",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv2.png"
+      "id": "MGM+.us",
+      "name": "MGM",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/mgm.png"
     },
     {
-      "id": "ITV2+1.uk",
-      "name": "ITV2 +1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv2.png"
+      "id": "Starz.us@East",
+      "name": "Starz East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "CartoonNetwork.uk",
-      "name": "Cartoon Network",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cartoon-network.png"
+      "id": "Starz.us@West",
+      "name": "Starz West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "CartoonNetwork.us",
-      "name": "Adult Swim East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/adult-swim.png"
+      "id": "StarzCinema.us@East",
+      "name": "Starz Cinema",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "CartoonNetworkPacific.us",
-      "name": "Adult Swim West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/adult-swim.png"
+      "id": "StarzComedy.us@East",
+      "name": "Starz Comedy",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "DisneyChannel.us",
-      "name": "Disney Channel East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disney-channel.png"
+      "id": "StarzEdge.us@East",
+      "name": "Starz Edge",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "DisneyChannelPacific.us",
-      "name": "Disney Channel West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disney-channel.png"
+      "id": "StarzKidsFamily.us@East",
+      "name": "Starz Kids & Family",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "DisneyXD.us",
-      "name": "Disney XD East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disneyxd.png"
+      "id": "StarzInBlack.us@East",
+      "name": "Starz In Black",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "DisneyXDPacific.us",
-      "name": "Disney XD West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disneyxd.png"
+      "id": "StarzEncore.us@East",
+      "name": "Starz Encore East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "YTV.ca",
-      "name": "YTV",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ytv.png"
+      "id": "StarzEncore.us@West",
+      "name": "Starz Encore West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "YTVPacific.ca",
-      "name": "YTV West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ytv.png"
+      "id": "StarzEncoreAction.us@East",
+      "name": "Starz Encore Action",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "PBSKidsNYC.us",
-      "name": "PBS Kids",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pbs-kids.png"
+      "id": "StarzEncoreBlack.us@East",
+      "name": "Starz Encore Black",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "NickJr.us",
-      "name": "Nick Jr. East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nick-jr.png"
+      "id": "StarzEncoreClassic.us@East",
+      "name": "Starz Encore Classic",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "NickJrPacific.us",
-      "name": "Nick Jr. West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nick-jr.png"
+      "id": "StarzEncoreFamily.us@East",
+      "name": "Starz Encore Family",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "Nickelodeon.us",
-      "name": "Nickelodeon East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
+      "id": "StarzEncoreSuspense.us@East",
+      "name": "Starz Encore Suspense",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "NickelodeonPacific.us",
-      "name": "Nickelodeon West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
+      "id": "StarzEncoreWesterns.us@East",
+      "name": "Starz Encore Westerns",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/starz.png"
     },
     {
-      "id": "Nicktoons.us",
-      "name": "Nicktoons East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nicktoons.png"
+      "id": "ShowtimeShowcase.us@East",
+      "name": "Showtime Showcase",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/showtime.png"
     },
     {
-      "id": "NickToonsPacific.us",
-      "name": "Nicktoons West",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nicktoons.png"
+      "id": "MovieTime.ca@SD",
+      "name": "MovieTime",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/movietime.png"
     },
     {
-      "id": "TeenNick.us",
-      "name": "TeenNick East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/teennick.png"
+      "id": "Film4.uk",
+      "name": "Film4",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/film4.png"
     },
     {
-      "id": "TSN1.ca",
-      "name": "TSN 1",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn1.png"
+      "id": "Film4+1.uk",
+      "name": "Film4 +1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/film4.png"
     },
     {
-      "id": "TSN2.ca",
-      "name": "TSN 2",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn2.png"
+      "id": "SkyCinemaPremiere.uk",
+      "name": "Sky Cinema Premiere",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/sky-cinema-premiere.png"
     },
     {
-      "id": "TSN3.ca",
-      "name": "TSN 3",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn3.png"
+      "id": "WarnerChannel.mx",
+      "name": "Warner Channel",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/warner-channel.png"
     },
     {
-      "id": "TSN4.ca",
-      "name": "TSN 4",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn4.png"
+      "id": "UniversalTV.mx",
+      "name": "Universal Channel",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/universal-tv.png"
     },
     {
-      "id": "TSN5.ca",
-      "name": "TSN 5",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn5.png"
-    },
-    {
-      "id": "ESPN.us",
-      "name": "ESPN",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn.png"
-    },
-    {
-      "id": "NFLChannel.us",
-      "name": "NFL Channel",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
-    },
-    {
-      "id": "NFLNetwork.us",
-      "name": "NFL Network",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
-    },
-    {
-      "id": "ESPN2.us",
-      "name": "ESPN2",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn2.png"
+      "id": "ParamountNetwork.us",
+      "name": "Paramount Network",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/paramount-network.png"
     },
     {
       "id": "SonyMovieChannel.us",
@@ -830,14 +721,94 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hallmark-mystery.png"
     },
     {
-      "id": "CMT.ca",
-      "name": "CMT Canada",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cmt.png"
+      "id": "BBCOne.uk",
+      "name": "BBC One",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc-one.png"
     },
     {
-      "id": "CartoonNetwork.ca",
-      "name": "Cartoon Network",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cartoon-network.png"
+      "id": "BBCTwo.uk",
+      "name": "BBC Two",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc-two.png"
+    },
+    {
+      "id": "Channel4.uk",
+      "name": "Channel 4",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-4.png"
+    },
+    {
+      "id": "Channel4+1.uk",
+      "name": "Channel 4 +1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-4.png"
+    },
+    {
+      "id": "Channel5.uk",
+      "name": "Channel 5",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-5.png"
+    },
+    {
+      "id": "Channel5+1.uk",
+      "name": "Channel 5 +1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/channel-5.png"
+    },
+    {
+      "id": "ITV1London.uk",
+      "name": "ITV1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv1.png"
+    },
+    {
+      "id": "ITV1London+1.uk",
+      "name": "ITV1 +1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv1.png"
+    },
+    {
+      "id": "ITV2.uk",
+      "name": "ITV2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/itv2.png"
+    },
+    {
+      "id": "TSN1.ca",
+      "name": "TSN 1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn1.png"
+    },
+    {
+      "id": "TSN2.ca",
+      "name": "TSN 2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn2.png"
+    },
+    {
+      "id": "TSN3.ca",
+      "name": "TSN 3",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn3.png"
+    },
+    {
+      "id": "TSN4.ca",
+      "name": "TSN 4",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn4.png"
+    },
+    {
+      "id": "TSN5.ca",
+      "name": "TSN 5",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn5.png"
+    },
+    {
+      "id": "ESPN.us",
+      "name": "ESPN",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn.png"
+    },
+    {
+      "id": "ESPN2.us",
+      "name": "ESPN2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn2.png"
+    },
+    {
+      "id": "NFLChannel.us",
+      "name": "NFL Channel",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
+    },
+    {
+      "id": "NFLNetwork.us",
+      "name": "NFL Network",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
