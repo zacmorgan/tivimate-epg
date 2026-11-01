@@ -520,9 +520,10 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo.png"
     },
     {
-      "id": "HBO2HD.us",
+      "id": "HBO2.us",
       "name": "HBO 2",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-2.png",
+      "fallback_xml_url": "https://epg.pw/api/epg.xml?channel_id=465041"
     },
     {
       "id": "HBOComedy.us",
