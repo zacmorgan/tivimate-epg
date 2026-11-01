@@ -125,6 +125,15 @@ def download(url: str, target: Path) -> None:
             time.sleep(2 ** (attempt + 1))
 
 
+def download_xml(url: str) -> ET.Element:
+    request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
+    with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
+        root = ET.parse(response).getroot()
+    if root.tag != "tv":
+        raise ValueError("fallback guide is not XMLTV")
+    return root
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("custom-channels.json"))
@@ -164,6 +173,21 @@ def main() -> None:
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
+
+    # A few feeds have reliable listings from a dedicated XMLTV endpoint but
+    # are not present in the regional bulk guide.  Keep the playlist-facing
+    # ID while importing those listings only when the main guide is empty.
+    for channel in channels:
+        channel_id = channel["id"]
+        fallback_url = channel.get("fallback_xml_url")
+        if programmes[channel_id] or not fallback_url:
+            continue
+        fallback_root = download_xml(fallback_url)
+        for programme in fallback_root.findall("programme"):
+            copied = copy.deepcopy(programme)
+            copied.set("channel", channel_id)
+            programmes[channel_id].append(copied)
+        print(f"Read fallback guide for {channel_id}", flush=True)
 
     translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
     if translated_count:
