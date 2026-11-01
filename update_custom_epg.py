@@ -125,6 +125,15 @@ def download(url: str, target: Path) -> None:
             time.sleep(2 ** (attempt + 1))
 
 
+def download_xmltv(url: str) -> ET.Element:
+    request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
+    with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
+        root = ET.fromstring(response.read())
+    if root.tag != "tv":
+        raise ValueError(f"external source is not XMLTV: {url}")
+    return root
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("custom-channels.json"))
@@ -164,6 +173,24 @@ def main() -> None:
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
+
+    for source_config in config.get("external_xmltv", []):
+        target_id = source_config["id"]
+        if target_id not in programmes:
+            raise ValueError(f"external source targets unknown guide ID: {target_id}")
+        root = download_xmltv(source_config["url"])
+        found = 0
+        for element in root.findall("programme"):
+            element.set("channel", target_id)
+            encoded = ET.tostring(element, encoding="utf-8")
+            digest = hashlib.sha256(encoded).digest()
+            if digest not in seen_programmes:
+                seen_programmes.add(digest)
+                programmes[target_id].append(copy.deepcopy(element))
+                found += 1
+        if not found:
+            raise ValueError(f"no programmes found in external source for {target_id}")
+        print(f"Read external guide for {target_id}", flush=True)
 
     translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
     if translated_count:
