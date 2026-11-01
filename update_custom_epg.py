@@ -21,6 +21,7 @@ BASE_URL = "https://iptv-epg.org/files/epg-{country}.xml.gz"
 CHUNK = 1024 * 1024
 TRANSLATION_URL = "https://api.mymemory.translated.net/get"
 MAX_TRANSLATION_CHARS = 4_500
+MAX_TRANSLATION_REQUESTS = 75
 
 
 def xml_language(element: ET.Element) -> str:
@@ -38,7 +39,7 @@ def translate_text(text: str, source_language: str) -> str | None:
         headers={"User-Agent": "TiviMate-Custom-EPG/1.0"},
     )
     try:
-        with urllib.request.urlopen(request, timeout=30, context=ssl.create_default_context()) as response:
+        with urllib.request.urlopen(request, timeout=8, context=ssl.create_default_context()) as response:
             payload = json.load(response)
         if payload.get("responseStatus") != 200:
             return None
@@ -61,6 +62,7 @@ def translate_programme_titles(
 
     translated_count = 0
     request_chars = 0
+    request_count = 0
     dirty = False
     for listings in programmes.values():
         for programme in listings:
@@ -77,10 +79,12 @@ def translate_programme_titles(
                     if (
                         len(original.encode("utf-8")) > 500
                         or request_chars + len(original) > MAX_TRANSLATION_CHARS
+                        or request_count >= MAX_TRANSLATION_REQUESTS
                     ):
                         continue
                     translation = translate_text(original, source_language)
                     request_chars += len(original)
+                    request_count += 1
                     if translation is None:
                         continue
                     cache[key] = translation
