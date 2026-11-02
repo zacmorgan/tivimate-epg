@@ -576,6 +576,13 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png"
     },
     {
+      "id": "StarzWest.us",
+      "name": "Starz West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png",
+      "copy_programmes_from": "Starz.us",
+      "offset_minutes": 180
+    },
+    {
       "id": "StarzCinema.us",
       "name": "Starz Cinema",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png"
