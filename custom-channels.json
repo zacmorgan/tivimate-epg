@@ -210,13 +210,8 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nick-jr.png"
     },
     {
-      "id": "Nickelodeon.us",
-      "name": "Nickelodeon East",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
-    },
-    {
       "id": "NickelodeonPacific.us",
-      "name": "Nickelodeon West",
+      "name": "Nickelodeon",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nickelodeon.png"
     },
     {
