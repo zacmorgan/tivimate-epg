@@ -780,6 +780,11 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tsn5.png"
     },
     {
+      "id": "Sportsnet360.ca",
+      "name": "Sportsnet 360 UHD (4K)",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/Sportsnet.png"
+    },
+    {
       "id": "ESPN.us",
       "name": "ESPN",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/espn.png"
