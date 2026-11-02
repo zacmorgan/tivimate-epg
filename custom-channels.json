@@ -601,6 +601,13 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png"
     },
     {
+      "id": "StarzEncoreWest.us",
+      "name": "Starz Encore West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png",
+      "copy_programmes_from": "StarzEncore.us",
+      "offset_minutes": 180
+    },
+    {
       "id": "StarzEncoreAction.us",
       "name": "Starz Encore Action",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png"

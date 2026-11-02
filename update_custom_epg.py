@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+from datetime import datetime, timedelta
 import gzip
 import hashlib
 import html
@@ -134,6 +135,14 @@ def download_xml(url: str) -> ET.Element:
     return root
 
 
+def shift_xmltv_timestamp(value: str, offset_minutes: int) -> str:
+    """Shift an XMLTV timestamp while preserving its original UTC offset."""
+    if len(value) < 14 or not value[:14].isdigit():
+        raise ValueError(f"Unrecognized XMLTV timestamp: {value!r}")
+    shifted = datetime.strptime(value[:14], "%Y%m%d%H%M%S") + timedelta(minutes=offset_minutes)
+    return shifted.strftime("%Y%m%d%H%M%S") + value[14:]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("custom-channels.json"))
@@ -189,6 +198,26 @@ def main() -> None:
             programmes[channel_id].append(copied)
         print(f"Read fallback guide for {channel_id}", flush=True)
 
+    # When no dedicated West listings are available, time-shift the matching
+    # East feed by three hours. Keep separate XMLTV IDs for East and West.
+    for channel in channels:
+        channel_id = channel["id"]
+        source_id = channel.get("copy_programmes_from")
+        if not source_id or programmes[channel_id]:
+            continue  # Prefer a real West feed if the upstream guide has one.
+        if source_id not in programmes or not programmes[source_id]:
+            raise ValueError(f"No programmes found for source {source_id} of {channel_id}")
+        offset_minutes = int(channel.get("offset_minutes", 0))
+        for source_programme in programmes[source_id]:
+            copied = copy.deepcopy(source_programme)
+            copied.set("channel", channel_id)
+            for time_attr in ("start", "stop"):
+                value = copied.get(time_attr)
+                if value:
+                    copied.set(time_attr, shift_xmltv_timestamp(value, offset_minutes))
+            programmes[channel_id].append(copied)
+        print(f"Built {channel_id} from {source_id} with {offset_minutes:+} minute shift", flush=True)
+
     translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
     if translated_count:
         print(f"Translated {translated_count} title fields ({translation_chars} new request characters)", flush=True)
@@ -229,7 +258,7 @@ def main() -> None:
     finally:
         pending.unlink(missing_ok=True)
 
-    print(f"Wrote {len(channels)} channels and {len(seen_programmes)} programmes to {args.output}")
+    print(f"Wrote {len(channels)} channels and {sum(map(len, programmes.values()))} programmes to {args.output}")
 
 
 if __name__ == "__main__":
