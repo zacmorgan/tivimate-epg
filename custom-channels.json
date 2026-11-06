@@ -25,6 +25,11 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/global-tv.png"
     },
     {
+      "id": "GlobalSaskatoon-CFSK.ca",
+      "name": "Global Saskatoon",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/global-tv.png"
+    },
+    {
       "id": "CityTv.ca",
       "name": "Citytv East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/citytv.png"
@@ -42,6 +47,11 @@
     {
       "id": "CTVVancouver-CIVT.ca",
       "name": "CTV West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv.png"
+    },
+    {
+      "id": "CTVSaskatchewan-CFQC.ca",
+      "name": "CTV Saskatoon",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv.png"
     },
     {
@@ -148,6 +158,11 @@
       "id": "PBSKLCS.us",
       "name": "PBS",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pbs.png"
+    },
+    {
+      "id": "CoziTV.us",
+      "name": "Cozi TV",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cozi-tv.png"
     },
     {
       "id": "Freeform.us",
@@ -275,6 +290,11 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/amc.png"
     },
     {
+      "id": "Showcase.ca",
+      "name": "Showcase",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/showcase.png"
+    },
+    {
       "id": "FX.us",
       "name": "FX East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fx.png"
@@ -300,6 +320,16 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/syfy.png"
     },
     {
+      "id": "USANetwork.us",
+      "name": "USA Network East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/usa-network.png"
+    },
+    {
+      "id": "USANetworkPacific.us",
+      "name": "USA Network West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/usa-network.png"
+    },
+    {
       "id": "TMZ.us",
       "name": "TMZ",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tmz.png"
@@ -315,6 +345,11 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/tv-land.png"
     },
     {
+      "id": "POP.us",
+      "name": "Pop",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/pop.png"
+    },
+    {
       "id": "GameShowNetwork.us",
       "name": "GSN",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/gsn.png"
@@ -328,6 +363,11 @@
       "id": "Lifetime.ca",
       "name": "Lifetime",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/lifetime.png"
+    },
+    {
+      "id": "WNetwork.ca",
+      "name": "W Network",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/w-network.png"
     },
     {
       "id": "Slice.ca",
@@ -521,6 +561,36 @@
       "fallback_xml_url": "https://epg.pw/api/epg.xml?channel_id=465041"
     },
     {
+      "id": "Crave1.ca",
+      "name": "Crave 1",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/crave.png"
+    },
+    {
+      "id": "Crave2.ca",
+      "name": "Crave 2",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/crave.png"
+    },
+    {
+      "id": "Crave3.ca",
+      "name": "Crave 3",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/crave.png"
+    },
+    {
+      "id": "Crave4.ca",
+      "name": "Crave 4",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/crave.png"
+    },
+    {
+      "id": "Paramount+withShowtime.us",
+      "name": "Showtime East",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/showtime.png"
+    },
+    {
+      "id": "Paramount+withShowtimePacific.us",
+      "name": "Showtime West",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/showtime.png"
+    },
+    {
       "id": "HBOComedy.us",
       "name": "HBO Comedy",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hbo-comedy.png"
@@ -638,11 +708,6 @@
       "id": "StarzEncoreWesterns.us",
       "name": "Starz Encore Westerns",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/85d4094fc4c25217bff35ff5f0695e4fcc269003/logos/STARZ.png"
-    },
-    {
-      "id": "ShowtimeShowcase.us",
-      "name": "Showtime Showcase",
-      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/showtime.png"
     },
     {
       "id": "MovieTime.ca",
@@ -781,8 +846,13 @@
     },
     {
       "id": "Sportsnet360.ca",
-      "name": "Sportsnet 360 UHD (4K)",
+      "name": "Sportsnet 360",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/Sportsnet.png"
+    },
+    {
+      "id": "SkySportsUltraHD.uk",
+      "name": "Sky Sports",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/sky-sports.png"
     },
     {
       "id": "ESPN.us",
