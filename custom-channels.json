@@ -877,22 +877,22 @@
     {
       "id": "FoxNewsChannel.us",
       "name": "Fox News Channel",
-      "logo": "http://103.176.90.154/picons/logos/USA/45573.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fox-news.png"
     },
     {
       "id": "MSNOW.us",
       "name": "MS NOW",
-      "logo": "http://103.176.90.154/picons/logos/USA/45535.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ms-now.png"
     },
     {
       "id": "CNBC.us",
       "name": "CNBC",
-      "logo": "http://103.176.90.154/picons/logos/USA/45593.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cnbc.png"
     },
     {
       "id": "CTVNewsChannel.ca",
       "name": "CTV News Channel",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176814.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv-news.png"
     },
     {
       "id": "BBCNewsChannel.uk",
@@ -902,37 +902,32 @@
     {
       "id": "MeTV.us",
       "name": "MeTV",
-      "logo": "http://103.176.90.154/picons/logos/USA/1074480.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/metv.png"
     },
     {
       "id": "IonTV.us",
       "name": "ION",
-      "logo": "http://103.176.90.154/picons/logos/USA/872292.png"
-    },
-    {
-      "id": "Grit.us",
-      "name": "Grit",
-      "logo": "http://103.176.90.154/picons/logos/USA/91856.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ion.png"
     },
     {
       "id": "DisneyJunior.us",
       "name": "Disney Junior",
-      "logo": "http://103.176.90.154/picons/logos/USA/45587.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/disney-jr.png"
     },
     {
       "id": "CTVComedyChannel.ca",
       "name": "CTV Comedy Channel",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176815.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv-comedy.png"
     },
     {
       "id": "VH1.us",
       "name": "VH1",
-      "logo": "http://103.176.90.154/picons/logos/USA/45436.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/vh1.png"
     },
     {
       "id": "BET.us",
       "name": "BET",
-      "logo": "http://103.176.90.154/picons/logos/USA/45610.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bet.png"
     },
     {
       "id": "BBCAmerica.us",
@@ -942,12 +937,12 @@
     {
       "id": "CTVDramaChannel.ca",
       "name": "CTV Drama Channel",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176871.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv-drama.png"
     },
     {
       "id": "CTVSciFiChannel.ca",
       "name": "CTV Sci-Fi Channel",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176819.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv-sci-fi.png"
     },
     {
       "id": "FXMovies.us",
@@ -962,62 +957,52 @@
     {
       "id": "OxygenTrueCrime.us",
       "name": "Oxygen True Crime",
-      "logo": "http://103.176.90.154/picons/logos/USANEW/OXYGENTRUECRIMEARCHIVES.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/oxygen-true-crime.png"
     },
     {
       "id": "OWN.us",
       "name": "OWN",
-      "logo": "http://103.176.90.154/picons/logos/USA/45518.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/own.png"
     },
     {
       "id": "truTV.us",
       "name": "truTV",
-      "logo": "http://103.176.90.154/picons/logos/USA/45468.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/trutv.png"
     },
     {
       "id": "CTVLifeChannel.ca",
       "name": "CTV Life Channel",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176818.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv-life.png"
     },
     {
       "id": "DiscoveryFamilyChannel.us",
       "name": "Discovery Family",
-      "logo": "http://103.176.90.154/picons/logos/USA/45443.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/discovery-family.png"
     },
     {
       "id": "SmithsonianNetwork.us",
       "name": "Smithsonian Channel",
-      "logo": "http://103.176.90.154/picons/logos/USA/91872.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/smithsonian-channel.png"
     },
     {
       "id": "TravelChannel.us",
       "name": "Travel Channel",
-      "logo": "http://103.176.90.154/picons/logos/USA/45437.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/travel-channel.png"
     },
     {
       "id": "CineMAX.us",
       "name": "Cinemax",
-      "logo": "http://103.176.90.154/picons/logos/USA/45598.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/cinemax.png"
     },
     {
       "id": "HollywoodSuite2000sMovies.ca",
       "name": "Hollywood Suite 2000s",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/1920760.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hollywood-suite.png"
     },
     {
       "id": "HallmarkChannel.us",
       "name": "Hallmark Channel",
-      "logo": "http://103.176.90.154/picons/logos/USA/45458.png"
-    },
-    {
-      "id": "GreatAmericanFamily.us",
-      "name": "Great American Family",
-      "logo": "http://103.176.90.154/picons/logos/USA/1038601.png"
-    },
-    {
-      "id": "Univision.us",
-      "name": "Univision",
-      "logo": "http://picons.cmshulk.com/picons/25586.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hallmark.png"
     },
     {
       "id": "SportsnetWest.ca",
@@ -1032,7 +1017,7 @@
     {
       "id": "FoxSports1.us",
       "name": "FS1",
-      "logo": "http://103.176.90.154/picons/logos/USA/45571.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/fs1.png"
     },
     {
       "id": "CBSSportsNetwork.us",
@@ -1042,22 +1027,22 @@
     {
       "id": "MLBNetwork.us",
       "name": "MLB Network",
-      "logo": "http://103.176.90.154/picons/logos/USA/45539.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/mlb-network.png"
     },
     {
       "id": "NHLNetwork.us",
       "name": "NHL Network",
-      "logo": "http://103.176.90.154/picons/logos/USA/NHL.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nhl-network.png"
     },
     {
       "id": "GolfChannel.us",
       "name": "Golf Channel",
-      "logo": "http://103.176.90.154/picons/logos/USA/45554.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/golf-channel.png"
     },
     {
       "id": "NFLRedZone.us",
       "name": "NFL RedZone",
-      "logo": "http://103.176.90.154/picons/logos/USA/NFL.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-redzone.png"
     },
     {
       "id": "CBCNewsNetwork.ca",
@@ -1067,27 +1052,32 @@
     {
       "id": "WeatherNetwork.ca",
       "name": "The Weather Network",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/716435.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/the-weather-network.png"
     },
     {
       "id": "MuchMusic.ca",
       "name": "Much",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/176924.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/much.png"
     },
     {
       "id": "HollywoodSuite70s+Movies.ca",
       "name": "Hollywood Suite 70s+",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/1920758.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hollywood-suite.png"
     },
     {
       "id": "HollywoodSuite80sAnd90sMovies.ca",
       "name": "Hollywood Suite 80s & 90s",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/1920757.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hollywood-suite.png"
     },
     {
       "id": "HollywoodSuite2010s+Movies.ca",
       "name": "Hollywood Suite 2010s+",
-      "logo": "http://103.176.90.154/picons/logos/CANADA/1920759.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/hollywood-suite.png"
+    },
+    {
+      "id": "Logo.us",
+      "name": "Logo TV",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/logo-tv.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
