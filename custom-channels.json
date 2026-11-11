@@ -1058,6 +1058,21 @@
       "id": "NFLRedZone.us",
       "name": "NFL RedZone",
       "logo": "http://103.176.90.154/picons/logos/USA/NFL.png"
+    },
+    {
+      "id": "CBCNewsNetwork.ca",
+      "name": "CBC News Network",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176801.png"
+    },
+    {
+      "id": "WeatherNetwork.ca",
+      "name": "The Weather Network",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/716435.png"
+    },
+    {
+      "id": "MuchMusic.ca",
+      "name": "Much",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176924.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
