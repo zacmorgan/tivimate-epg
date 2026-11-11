@@ -873,6 +873,191 @@
       "id": "NFLNetwork.us",
       "name": "NFL Network",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nfl-network.png"
+    },
+    {
+      "id": "FoxNewsChannel.us",
+      "name": "Fox News Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/45573.png"
+    },
+    {
+      "id": "MSNOW.us",
+      "name": "MS NOW",
+      "logo": "http://103.176.90.154/picons/logos/USA/45535.png"
+    },
+    {
+      "id": "CNBC.us",
+      "name": "CNBC",
+      "logo": "http://103.176.90.154/picons/logos/USA/45593.png"
+    },
+    {
+      "id": "CTVNewsChannel.ca",
+      "name": "CTV News Channel",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176814.png"
+    },
+    {
+      "id": "BBCNewsChannel.uk",
+      "name": "BBC News",
+      "logo": "http://103.176.90.154/picons/logos/UK/1458580.png"
+    },
+    {
+      "id": "MeTV.us",
+      "name": "MeTV",
+      "logo": "http://103.176.90.154/picons/logos/USA/1074480.png"
+    },
+    {
+      "id": "IonTV.us",
+      "name": "ION",
+      "logo": "http://103.176.90.154/picons/logos/USA/872292.png"
+    },
+    {
+      "id": "Grit.us",
+      "name": "Grit",
+      "logo": "http://103.176.90.154/picons/logos/USA/91856.png"
+    },
+    {
+      "id": "DisneyJunior.us",
+      "name": "Disney Junior",
+      "logo": "http://103.176.90.154/picons/logos/USA/45587.png"
+    },
+    {
+      "id": "CTVComedyChannel.ca",
+      "name": "CTV Comedy Channel",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176815.png"
+    },
+    {
+      "id": "VH1.us",
+      "name": "VH1",
+      "logo": "http://103.176.90.154/picons/logos/USA/45436.png"
+    },
+    {
+      "id": "BET.us",
+      "name": "BET",
+      "logo": "http://103.176.90.154/picons/logos/USA/45610.png"
+    },
+    {
+      "id": "BBCAmerica.us",
+      "name": "BBC America",
+      "logo": "http://103.176.90.154/picons/logos/USA/45612.png"
+    },
+    {
+      "id": "CTVDramaChannel.ca",
+      "name": "CTV Drama Channel",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176871.png"
+    },
+    {
+      "id": "CTVSciFiChannel.ca",
+      "name": "CTV Sci-Fi Channel",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176819.png"
+    },
+    {
+      "id": "FXMovies.us",
+      "name": "FX Movie Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/45450.png"
+    },
+    {
+      "id": "LifetimeMoviesNetwork.us",
+      "name": "LMN",
+      "logo": "http://103.176.90.154/picons/logos/USA/1110680.png"
+    },
+    {
+      "id": "OxygenTrueCrime.us",
+      "name": "Oxygen True Crime",
+      "logo": "http://103.176.90.154/picons/logos/USANEW/OXYGENTRUECRIMEARCHIVES.png"
+    },
+    {
+      "id": "OWN.us",
+      "name": "OWN",
+      "logo": "http://103.176.90.154/picons/logos/USA/45518.png"
+    },
+    {
+      "id": "truTV.us",
+      "name": "truTV",
+      "logo": "http://103.176.90.154/picons/logos/USA/45468.png"
+    },
+    {
+      "id": "CTVLifeChannel.ca",
+      "name": "CTV Life Channel",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/176818.png"
+    },
+    {
+      "id": "DiscoveryFamilyChannel.us",
+      "name": "Discovery Family",
+      "logo": "http://103.176.90.154/picons/logos/USA/45443.png"
+    },
+    {
+      "id": "SmithsonianNetwork.us",
+      "name": "Smithsonian Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/91872.png"
+    },
+    {
+      "id": "TravelChannel.us",
+      "name": "Travel Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/45437.png"
+    },
+    {
+      "id": "CineMAX.us",
+      "name": "Cinemax",
+      "logo": "http://103.176.90.154/picons/logos/USA/45598.png"
+    },
+    {
+      "id": "HollywoodSuite2000sMovies.ca",
+      "name": "Hollywood Suite 2000s",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/1920760.png"
+    },
+    {
+      "id": "HallmarkChannel.us",
+      "name": "Hallmark Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/45458.png"
+    },
+    {
+      "id": "GreatAmericanFamily.us",
+      "name": "Great American Family",
+      "logo": "http://103.176.90.154/picons/logos/USA/1038601.png"
+    },
+    {
+      "id": "Univision.us",
+      "name": "Univision",
+      "logo": "http://picons.cmshulk.com/picons/25586.png"
+    },
+    {
+      "id": "SportsnetWest.ca",
+      "name": "Sportsnet West",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/904206.png"
+    },
+    {
+      "id": "SportsnetOne.ca",
+      "name": "Sportsnet ONE",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/904209.png"
+    },
+    {
+      "id": "FoxSports1.us",
+      "name": "FS1",
+      "logo": "http://103.176.90.154/picons/logos/USA/45571.png"
+    },
+    {
+      "id": "CBSSportsNetwork.us",
+      "name": "CBS Sports Network",
+      "logo": "http://103.176.90.154/picons/logos/USA/45601.png"
+    },
+    {
+      "id": "MLBNetwork.us",
+      "name": "MLB Network",
+      "logo": "http://103.176.90.154/picons/logos/USA/45539.png"
+    },
+    {
+      "id": "NHLNetwork.us",
+      "name": "NHL Network",
+      "logo": "http://103.176.90.154/picons/logos/USA/NHL.png"
+    },
+    {
+      "id": "GolfChannel.us",
+      "name": "Golf Channel",
+      "logo": "http://103.176.90.154/picons/logos/USA/45554.png"
+    },
+    {
+      "id": "NFLRedZone.us",
+      "name": "NFL RedZone",
+      "logo": "http://103.176.90.154/picons/logos/USA/NFL.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
