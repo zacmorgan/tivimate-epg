@@ -897,7 +897,7 @@
     {
       "id": "BBCNewsChannel.uk",
       "name": "BBC News",
-      "logo": "http://103.176.90.154/picons/logos/UK/1458580.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc.png"
     },
     {
       "id": "MeTV.us",
@@ -932,7 +932,7 @@
     {
       "id": "BBCAmerica.us",
       "name": "BBC America",
-      "logo": "http://103.176.90.154/picons/logos/USA/45612.png"
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/bbc.png"
     },
     {
       "id": "CTVDramaChannel.ca",
