@@ -1073,6 +1073,21 @@
       "id": "MuchMusic.ca",
       "name": "Much",
       "logo": "http://103.176.90.154/picons/logos/CANADA/176924.png"
+    },
+    {
+      "id": "HollywoodSuite70s+Movies.ca",
+      "name": "Hollywood Suite 70s+",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/1920758.png"
+    },
+    {
+      "id": "HollywoodSuite80sAnd90sMovies.ca",
+      "name": "Hollywood Suite 80s & 90s",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/1920757.png"
+    },
+    {
+      "id": "HollywoodSuite2010s+Movies.ca",
+      "name": "Hollywood Suite 2010s+",
+      "logo": "http://103.176.90.154/picons/logos/CANADA/1920759.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
