@@ -1078,6 +1078,31 @@
       "id": "Logo.us",
       "name": "Logo TV",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/logo-tv.png"
+    },
+    {
+      "id": "TheMovieChannel.us",
+      "name": "The Movie Channel",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/the-movie-channel.png"
+    },
+    {
+      "id": "ReelzChannel.us",
+      "name": "REELZ",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/reelz.png"
+    },
+    {
+      "id": "DiscoveryTurbo.us",
+      "name": "Discovery Turbo",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/discovery-turbo.png"
+    },
+    {
+      "id": "AXSTV.us",
+      "name": "AXS TV",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/axs-tv.png"
+    },
+    {
+      "id": "NBAtv.us",
+      "name": "NBA TV",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/nba-tv.png"
     }
   ],
   "_manual_refresh_requested_at_utc": "2026-10-31T22:51:56Z"
