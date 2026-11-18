@@ -224,20 +224,6 @@ def main() -> None:
 
     missing = [channel_id for channel_id, listings in programmes.items() if not listings]
     if missing:
-        # Temporary diagnostic: identify regional Citytv IDs in the Canadian upstream feed.
-        for source in sources:
-            if source.name != "epg-ca.xml.gz":
-                continue
-            with gzip.open(source, "rb") as guide_stream:
-                for _, element in ET.iterparse(guide_stream, events=("end",)):
-                    if element.tag == "channel":
-                        labels = [item.text or "" for item in element.findall("display-name")]
-                        label = (element.get("id") or "") + " " + " ".join(labels)
-                        if any(term in label.lower() for term in ("citytv", "winnipeg", "chmi", "city ")):
-                            print(f"Upstream candidate: id={element.get('id')!r}, labels={labels!r}", flush=True)
-                        element.clear()
-                    elif element.tag == "programme":
-                        break
         raise ValueError(f"No programmes found for {len(missing)} guide IDs: {missing}")
 
     root = ET.Element("tv", {
