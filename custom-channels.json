@@ -40,6 +40,21 @@
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/citytv.png"
     },
     {
+      "id": "CityTvCalgary-CKAL.ca",
+      "name": "Citytv Calgary",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/citytv.png"
+    },
+    {
+      "id": "CityTvEdmonton.ca",
+      "name": "Citytv Edmonton",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/citytv.png"
+    },
+    {
+      "id": "CityTvWinnipeg.ca",
+      "name": "Citytv Winnipeg",
+      "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/citytv.png"
+    },
+    {
       "id": "CTVToronto-CFTO.ca",
       "name": "CTV East",
       "logo": "https://raw.githubusercontent.com/zacmorgan/tivimate-epg/main/logos/ctv.png"
