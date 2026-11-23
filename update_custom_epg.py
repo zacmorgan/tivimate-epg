@@ -107,32 +107,31 @@ def translate_programme_titles(
 
 def download(url: str, target: Path) -> None:
     partial = target.with_suffix(target.suffix + ".part")
+    compressed = target.suffix == ".gz"
     for attempt in range(3):
         try:
             request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
-            with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
+            timeout = 120 if compressed else 30
+            with urllib.request.urlopen(request, timeout=timeout, context=ssl.create_default_context()) as response:
                 with partial.open("wb") as output:
                     shutil.copyfileobj(response, output, CHUNK)
-            with gzip.open(partial, "rb") as source:
-                _, root = next(ET.iterparse(source, events=("start",)))
-                if root.tag != "tv":
-                    raise ValueError("download is not a gzipped XMLTV file")
+            if compressed:
+                with gzip.open(partial, "rb") as source:
+                    _, root = next(ET.iterparse(source, events=("start",)))
+            else:
+                root = ET.parse(partial).getroot()
+                if root.find("programme") is None:
+                    raise ValueError(f"No programme listings in {target.name}")
+            if root.tag != "tv":
+                raise ValueError(f"{target.name} is not XMLTV")
             partial.replace(target)
             return
-        except Exception:
+        except Exception as error:
             partial.unlink(missing_ok=True)
             if attempt == 2:
                 raise
+            print(f"Retrying {target.name} after {error}", flush=True)
             time.sleep(2 ** (attempt + 1))
-
-
-def download_xml(url: str) -> ET.Element:
-    request = urllib.request.Request(url, headers={"User-Agent": "TiviMate-Custom-EPG/1.0"})
-    with urllib.request.urlopen(request, timeout=120, context=ssl.create_default_context()) as response:
-        root = ET.parse(response).getroot()
-    if root.tag != "tv":
-        raise ValueError("fallback guide is not XMLTV")
-    return root
 
 
 def shift_xmltv_timestamp(value: str, offset_minutes: int) -> str:
@@ -168,35 +167,44 @@ def main() -> None:
             download(BASE_URL.format(country=country), source)
         sources.append(source)
 
-    programmes = {channel_id: [] for channel_id in ids}
+    alternate_ids = {ch["regional_alias"] for ch in channels if ch.get("regional_alias")}
+    regional_programmes = {channel_id: [] for channel_id in ids | alternate_ids}
     seen_programmes = set()
     for source in sources:
         with gzip.open(source, "rb") as stream:
             for _, element in ET.iterparse(stream, events=("end",)):
-                if element.tag == "programme" and element.get("channel") in programmes:
+                if element.tag == "programme" and element.get("channel") in regional_programmes:
                     encoded = ET.tostring(element, encoding="utf-8")
                     digest = hashlib.sha256(encoded).digest()
                     if digest not in seen_programmes:
                         seen_programmes.add(digest)
-                        programmes[element.get("channel")].append(copy.deepcopy(element))
+                        regional_programmes[element.get("channel")].append(copy.deepcopy(element))
                 if element.tag in ("channel", "programme"):
                     element.clear()
         print(f"Read {source.name}", flush=True)
 
-    # A few feeds have reliable listings from a dedicated XMLTV endpoint but
-    # are not present in the regional bulk guide.  Keep the playlist-facing
-    # ID while importing those listings only when the main guide is empty.
+    # Some stations have a different ID in the regional guide. Keep the M3U ID
+    # in the output and contact the dedicated feed only if both IDs are absent.
+    programmes = {channel_id: regional_programmes[channel_id] for channel_id in ids}
     for channel in channels:
         channel_id = channel["id"]
-        fallback_url = channel.get("fallback_xml_url")
-        if programmes[channel_id] or not fallback_url:
+        if programmes[channel_id]:
             continue
-        fallback_root = download_xml(fallback_url)
-        for programme in fallback_root.findall("programme"):
+        alias = channel.get("regional_alias")
+        if alias and regional_programmes[alias]:
+            listings = regional_programmes[alias]
+            print(f"Using regional guide {alias} for {channel_id}", flush=True)
+        elif channel.get("fallback_xml_url"):
+            fallback_file = args.work_dir / "fallback.xml"
+            download(channel["fallback_xml_url"], fallback_file)
+            listings = ET.parse(fallback_file).getroot().findall("programme")
+            print(f"Read fallback guide for {channel_id}", flush=True)
+        else:
+            continue
+        for programme in listings:
             copied = copy.deepcopy(programme)
             copied.set("channel", channel_id)
             programmes[channel_id].append(copied)
-        print(f"Read fallback guide for {channel_id}", flush=True)
 
     # When no dedicated West listings are available, time-shift the matching
     # East feed by three hours. Keep separate XMLTV IDs for East and West.
