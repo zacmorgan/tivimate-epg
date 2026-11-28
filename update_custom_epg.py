@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 import copy
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import gzip
 import hashlib
 import html
@@ -53,7 +53,8 @@ def translate_text(text: str, source_language: str) -> str | None:
 def translate_programme_titles(
     programmes: dict[str, list[ET.Element]],
     cache_path: Path,
-) -> tuple[int, int]:
+    now: datetime | None = None,
+) -> tuple[int, int, int, int]:
     try:
         cache = json.loads(cache_path.read_text(encoding="utf-8"))
     except FileNotFoundError:
@@ -62,45 +63,116 @@ def translate_programme_titles(
         raise ValueError("translation cache must be a JSON object")
 
     translated_count = 0
+    translated_descriptions = 0
+    preferred_english_titles = 0
     request_chars = 0
     request_count = 0
     dirty = False
-    for listings in programmes.values():
+
+    # These show titles were mistranslated by the public service. The English
+    # names below match the titles supplied by the Mexican source guide.
+    for key, correct_title in {
+        "es|El novato": "The Rookie",
+        "es|La ley y el orden": "Law and Order",
+        "es|La ley y el orden: UVE": "Law and Order: Special Victims Unit",
+    }.items():
+        if cache.get(key) != correct_title:
+            cache[key] = correct_title
+            dirty = True
+
+    def translate_field(field: ET.Element, *, reject_unchanged: bool = False) -> bool:
+        nonlocal request_chars, request_count, dirty
+        source_language = xml_language(field)
+        original = (field.text or "").strip()
+        if not original or source_language in ("", "en"):
+            return False
+        key = f"{source_language}|{original}"
+        translation = cache.get(key)
+        if not isinstance(translation, str) or not translation.strip():
+            # MyMemory accepts a maximum of 500 bytes per request; the
+            # anonymous tier is capped at 5,000 characters each day.
+            if (
+                len(original.encode("utf-8")) > 500
+                or request_chars + len(original) > MAX_TRANSLATION_CHARS
+                or request_count >= MAX_TRANSLATION_REQUESTS
+            ):
+                return False
+            translation = translate_text(original, source_language)
+            request_chars += len(original)
+            request_count += 1
+            if translation is None:
+                return False
+            if not reject_unchanged or translation.casefold() != original.casefold():
+                cache[key] = translation
+                dirty = True
+        if reject_unchanged and translation.casefold() == original.casefold():
+            return False
+        field.text = translation
+        field.set("lang", "en")
+        field.attrib.pop("{http://www.w3.org/XML/1998/namespace}lang", None)
+        return True
+
+    def prefer_native_english(programme: ET.Element, tag: str) -> bool:
+        nonlocal preferred_english_titles
+        fields = programme.findall(tag)
+        english = next((field for field in fields if xml_language(field) == "en" and (field.text or "").strip()), None)
+        if english is None:
+            return False
+        if fields[0] is not english:
+            position = list(programme).index(fields[0])
+            programme.remove(english)
+            programme.insert(position, english)
+            if tag in ("title", "sub-title"):
+                preferred_english_titles += 1
+        return True
+
+    # Mexican listings often have an official English title as well as a
+    # Spanish title. Prefer the official title over machine translation.
+    for channel_id, listings in programmes.items():
         for programme in listings:
-            for field in programme.findall("title") + programme.findall("sub-title"):
-                source_language = xml_language(field)
-                original = (field.text or "").strip()
-                if not original or source_language in ("", "en"):
+            for tag in ("title", "sub-title"):
+                if channel_id.endswith(".mx") and prefer_native_english(programme, tag):
                     continue
-                key = f"{source_language}|{original}"
-                translation = cache.get(key)
-                if not isinstance(translation, str):
-                    # MyMemory accepts a maximum of 500 bytes per request; the
-                    # anonymous tier is capped at 5,000 characters each day.
-                    if (
-                        len(original.encode("utf-8")) > 500
-                        or request_chars + len(original) > MAX_TRANSLATION_CHARS
-                        or request_count >= MAX_TRANSLATION_REQUESTS
-                    ):
-                        continue
-                    translation = translate_text(original, source_language)
-                    request_chars += len(original)
-                    request_count += 1
-                    if translation is None:
-                        continue
-                    cache[key] = translation
-                    dirty = True
-                field.text = translation
-                field.set("lang", "en")
-                field.attrib.pop("{http://www.w3.org/XML/1998/namespace}lang", None)
-                translated_count += 1
+                for field in programme.findall(tag):
+                    if translate_field(field, reject_unchanged=channel_id.endswith(".mx")):
+                        translated_count += 1
+
+    # Spend any remaining free-translation allowance on the closest current or
+    # upcoming Mexican descriptions, interleaved by broadcast time.
+    now = now or datetime.now(timezone.utc)
+
+    def programme_time(value: str | None) -> datetime | None:
+        if not value:
+            return None
+        try:
+            return datetime.strptime(value, "%Y%m%d%H%M%S %z")
+        except ValueError:
+            return None
+
+    upcoming = []
+    for channel_id, listings in programmes.items():
+        if not channel_id.endswith(".mx"):
+            continue
+        for programme in listings:
+            stop = programme_time(programme.get("stop"))
+            if stop is not None and stop <= now:
+                continue
+            start = programme_time(programme.get("start")) or datetime.max.replace(tzinfo=timezone.utc)
+            upcoming.append((start, channel_id, programme))
+    upcoming.sort(key=lambda item: (item[0], item[1]))
+    for _, _, programme in upcoming:
+        if prefer_native_english(programme, "desc"):
+            continue
+        for field in programme.findall("desc"):
+            if xml_language(field) == "es" and translate_field(field, reject_unchanged=True):
+                translated_descriptions += 1
 
     if dirty:
         cache_path.write_text(
             json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
             encoding="utf-8",
         )
-    return translated_count, request_chars
+    return translated_count, translated_descriptions, preferred_english_titles, request_chars
 
 
 
@@ -226,9 +298,13 @@ def main() -> None:
             programmes[channel_id].append(copied)
         print(f"Built {channel_id} from {source_id} with {offset_minutes:+} minute shift", flush=True)
 
-    translated_count, translation_chars = translate_programme_titles(programmes, args.translation_cache)
-    if translated_count:
-        print(f"Translated {translated_count} title fields ({translation_chars} new request characters)", flush=True)
+    title_count, description_count, preferred_titles, translation_chars = translate_programme_titles(programmes, args.translation_cache)
+    print(
+        f"Translated {title_count} title fields and {description_count} Mexican descriptions; "
+        f"preferred {preferred_titles} existing English titles "
+        f"({translation_chars} new request characters)",
+        flush=True,
+    )
 
     missing = [channel_id for channel_id, listings in programmes.items() if not listings]
     if missing:
@@ -271,3 +347,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
