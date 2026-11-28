@@ -300,6 +300,14 @@ def main() -> None:
             programmes[channel_id].append(copied)
         print(f"Built {channel_id} from {source_id} with {offset_minutes:+} minute shift", flush=True)
 
+    # Align Warner Mexico's guide with the observed CAR-AMP stream.
+    for programme in programmes.get("WarnerChannel.mx", []):
+        for time_attr in ("start", "stop"):
+            value = programme.get(time_attr)
+            if value:
+                programme.set(time_attr, shift_xmltv_timestamp(value, -51))
+    print("Shifted WarnerChannel.mx listings by -51 minutes", flush=True)
+
     title_count, description_count, preferred_titles, translation_chars = translate_programme_titles(programmes, args.translation_cache)
     print(
         f"Translated {title_count} title fields and {description_count} Mexican descriptions; "
