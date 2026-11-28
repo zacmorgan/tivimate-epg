@@ -75,6 +75,8 @@ def translate_programme_titles(
         "es|El novato": "The Rookie",
         "es|La ley y el orden": "Law and Order",
         "es|La ley y el orden: UVE": "Law and Order: Special Victims Unit",
+        "es|Chicago Med": "Chicago Med",
+        "es|FBI": "FBI",
     }.items():
         if cache.get(key) != correct_title:
             cache[key] = correct_title
